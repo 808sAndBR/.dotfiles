@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+## File: gh.sh
+
+if [[ $PWD/ = /Users/sbrenstuhl/Brandless/data-team* ]]; then
+    open https://github.com/BrandlessInc/data-team
+elif [[ $PWD/ = /Users/sbrenstuhl/Brandless/brandless-airflow* ]]; then
+    open https://github.com/BrandlessInc/brandless-airflow
+elif [[ $PWD/ = /Users/sbrenstuhl/Brandless/astro-brandless-airflow* ]]; then
+    open https://github.com/BrandlessInc/astro-brandless-airflow
+else
+    # using git trees makes this make sense, there is probably a better way 
+    open https://github.com/BrandlessInc/data-team 
+fi

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# File: rmd_rend.sh
+
+Rscript -e rmarkdown::render('$1')

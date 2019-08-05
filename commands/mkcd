@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+## File: mkcd.sh
+
+mkdir "$1"
+cd "$1"

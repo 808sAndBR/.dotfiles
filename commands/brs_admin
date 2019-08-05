@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+## File: brs_admin.sh
+
+echo $RS_ADMIN_PW | pbcopy
+
+pgcli -h brandless-virginia-development.cyprxbwwsuox.us-east-1.redshift.amazonaws.com -p 5439 -U scott brandless
+

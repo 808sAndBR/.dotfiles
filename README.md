@@ -11,3 +11,5 @@ ln -sf ~/.dotfiles/shells/.zshrc ~/.zshrc
 mkdir .vim/after
 ln -sf ~/.dotfiles/vim/after_plugin ~/.vim/after/plugin
 ```
+
+Set all environmental variables in .profile

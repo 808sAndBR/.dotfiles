@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+## File: brs.sh
+
+echo "¯\_(ツ)_/¯" | pbcopy

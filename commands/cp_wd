@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# File: cp_wd.sh
+
+pwd | pbcopy

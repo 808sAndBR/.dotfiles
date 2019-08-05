@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+## File: bstaging.sh
+
+mycli $MYSQL_STAGE_CONN --auto-vertical-output

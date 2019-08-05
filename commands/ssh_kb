@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+## File: ssh_kb.sh
+
+ssh ubuntu@ec2-54-83-128-194.compute-1.amazonaws.com -i ~/.ssh/mykey

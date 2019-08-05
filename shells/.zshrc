@@ -10,8 +10,8 @@ export ZSH=/Users/sbrenstuhl/.oh-my-zsh
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre
 
 # Path to my commands
-FPATH=~/Projects/Commands:$FPATH
-fpath=( ~/Projects/Commands "${fpath[@]}" )
+FPATH=~/.dotfiles/commands:$FPATH
+# fpath=( ~/Projects/Commands "${fpath[@]}" )
 autoload -Uz copy_recent brs brs_admin mkcd shrug jump gh rmd_rend ssh_kb bstaging cp_wd
 
 # Set name of the theme to load. Optionally, if you set this to "random"

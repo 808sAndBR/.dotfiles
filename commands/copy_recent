@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# File: copy_recent.sh
+
+# function copy_recent {
+IFS=$'\n'
+local recent_downloads=($(ls -t ~/Downloads | head -n$1))
+unset IFS
+
+for file in ${recent_downloads[*]}
+    do
+        cp ~/Downloads/$file ./$file
+    done
