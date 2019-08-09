@@ -130,7 +130,9 @@ bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
 # Powerline prompts
-#prompt_zsh_battery_level() {
+
+
+# prompt_zsh_battery_level() {
 #    percentage=`pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f1 -d';' | grep -oe '\([0-9.]*\)'`
 #    local color='%F{red}'
 #    local symbol="\uf00d"
@@ -257,5 +259,8 @@ POWERLEVEL9K_TIME_BACKGROUND='blue'
 POWERLEVEL9K_NETWORK_ICON=`zsh_internet_signal`
 POWERLEVEL9K_CUSTOM_INTERNET_SIGNAL="zsh_internet_signal"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context dir_writable dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time ram virtualenv rbenv rvm time)
+# tweak colors
+POWERLEVEL9K_VIRTUALENV_BACKGROUND=107
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context dir_writable dir virtualenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time ram rbenv rvm time)
