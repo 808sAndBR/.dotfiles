@@ -2,8 +2,7 @@
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab " use spaces instead of tabs.
-set smarttab " let's tab key insert 'tab stops', and bksp deletes tabs.
+set expandtab " use spaces instead of tabs.  set smarttab " let's tab key insert 'tab stops', and bksp deletes tabs.
 set shiftround " tab / shifting moves to closest tabstop.
 set autoindent " Match indents on new lines.
 set smartindent " Intellegently dedent / indent new lines based on rules.
@@ -35,7 +34,7 @@ highlight ColorColumn ctermbg=6
 call plug#begin('~/.vim/plugged')
 
 " Plugin for code completion
-" Plug 'valloric/youcompleteme'
+Plug 'valloric/youcompleteme'
 
 " Plugin for better commenting
 Plug 'tpope/vim-commentary'
@@ -52,7 +51,7 @@ Plug 'jszakmeister/vim-togglecursor'
 " Plugin to send imput to tmux
 " Plug 'matschaffer/vim-islime2'
 " Plug 'jpalardy/vim-slime'
-Plug 'epeli/slimux'
+" Plug 'epeli/slimux'
 " Plug 'jgdavey/tslime.vim'
 
 " Plugin to navigate source tree
@@ -73,6 +72,9 @@ Plug 'svermeulen/vim-easyclip'
 
 " Plugin to check syntax  
 Plug 'scrooloose/syntastic'
+
+" make REPL work from vim
+Plug 'sillybun/vim-repl'
 
 " Initialize plugin system
 call plug#end()
@@ -143,12 +145,22 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " nnoremap <leader>f :%y r<cr>:call islime2#iTermSendNext(@r)<CR>
 
 " Keymapping for SLIMUX
-map <Leader>s :SlimuxREPLSendLine<CR>
-vmap <Leader>s :SlimuxREPLSendSelection<CR>
-map <Leader>b :SlimuxREPLSendBuffer<CR>
-map <Leader>a :SlimuxShellLast<CR>
-map <Leader>k :SlimuxSendKeysLast<CR>
+" map <Leader>s :SlimuxREPLSendLine<CR>
+" vmap <Leader>s :SlimuxREPLSendSelection<CR>
+" map <Leader>b :SlimuxREPLSendBuffer<CR>
+" map <Leader>a :SlimuxShellLast<CR>
+" map <Leader>k :SlimuxSendKeysLast<CR>
 
+" Key mapping for vim-repl
+let g:repl_program = {
+            \   'python': 'ptpython',
+            \   'default': 'zsh',
+            \   'r': 'R',
+            \   'vim': 'vim -e',
+            \   }
+
+nnoremap <leader>r :REPLToggle<Cr>
+let g:repl_position = 3
 
 " helpers
 command Jpretty execute "%!python -m json.tool"
@@ -180,5 +192,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_quiet_messages = {"regex": 'syntax error at or near "ignore"'}
+let g:syntastic_quiet_messages = {"regex": 'syntax error at or near "ignore"',
+                                 \ "file": '/private/var/folders/qc'}
 let g:syntastic_ignore_files = ['dev.env']

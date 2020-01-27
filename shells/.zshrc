@@ -12,7 +12,7 @@ export ZSH=/Users/sbrenstuhl/.oh-my-zsh
 # Path to my commands
 FPATH=~/.dotfiles/commands:$FPATH
 # fpath=( ~/Projects/Commands "${fpath[@]}" )
-autoload -Uz copy_recent brs brs_admin mkcd shrug jump gh rmd_rend ssh_kb bstaging cp_wd
+autoload -Uz copy_recent brs brs_admin mkcd shrug jump gh rmd_rend ssh_kb bstaging cp_wd brs_dev_admin
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -225,7 +225,7 @@ POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
 POWERLEVEL9K_DIR_HOME_FOREGROUND="white"
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 
 # Context
 POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=true
