@@ -33,6 +33,9 @@ highlight ColorColumn ctermbg=6
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+" helper to let youcompleteme and utilisnips play nice
+Plug 'ervandew/supertab'
+
 " Plugin for code completion
 Plug 'valloric/youcompleteme'
 
@@ -75,6 +78,15 @@ Plug 'scrooloose/syntastic'
 
 " make REPL work from vim
 Plug 'sillybun/vim-repl'
+
+" show vertical lines for indents
+Plug 'yggdroot/indentline'
+
+" make snippets work
+Plug 'sirver/ultisnips'
+
+" a bunch of default snippets
+Plug 'honza/vim-snippets'
 
 " Initialize plugin system
 call plug#end()
@@ -179,6 +191,33 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " " copy whole file to clipboard
 " vnoremap <Leader>C :%w !pbcopy
+
+
+" indentline settings
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+"Utilisnip commands
+" Check out this video for more info: http://vimcasts.org/episodes/meet-ultisnips/
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+"" below is the old recomended version, delete once the above is working
+" " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 
 " keep marks
 set viminfo='100,f1
