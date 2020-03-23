@@ -1,0 +1,18 @@
+snippet ref "set up dbt refferences"
+{{ ref('$1') }}$0
+endsnippet
+	
+snippet cte "Quick cte setup" 
+WITH $1 AS (
+	SELECT $2
+	FROM $3
+	WHERE $4
+)$0
+endsnippet
+
+
+snippet c_dist "Compare distinct count to all" 
+SELECT COUNT(1) AS all_count
+	, COUNT(DISTINCT $2) AS $2_count
+FROM $3 $0
+endsnippet
