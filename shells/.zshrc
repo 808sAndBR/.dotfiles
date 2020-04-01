@@ -280,3 +280,8 @@ if [ -f '/Users/scottbrenstuhl/Applications/google-cloud-sdk/path.zsh.inc' ]; th
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/scottbrenstuhl/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/scottbrenstuhl/Applications/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+# enable fuzzy matching with fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'

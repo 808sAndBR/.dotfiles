@@ -88,6 +88,11 @@ Plug 'sirver/ultisnips'
 " a bunch of default snippets
 Plug 'honza/vim-snippets'
 
+" easier searching across files
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
+
 " Initialize plugin system
 call plug#end()
 
@@ -185,6 +190,10 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " close vim if NerdTree is the only thing still open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" show hidden files by default in NerdTree
+let NERDTreeShowHidden=1
+
+
 " make copy/paste from clipbaord work in the usual manner
 " vnoremap <Leader>c :w !pbcopy<CR><CR> 
 " noremap <Leader>v :r !pbpaste<CR><CR>
@@ -220,6 +229,9 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" Set up runtime path for fzf to work
+set rtp+=/usr/local/opt/fzf
 
 
 " keep marks
