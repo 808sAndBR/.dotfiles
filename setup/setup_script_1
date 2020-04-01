@@ -1,0 +1,44 @@
+#!/bin/bash
+
+git clone https://github.com/808sAndBR/.dotfiles.git
+
+# symlink .vimrc
+ln -sf ~/.dotfiles/vim/.vimrc ~/.vimrc
+
+# symlink .bashrc
+ln -sf ~/.dotfiles/shells/.zshrc ~/.zshrc
+
+# set up commands to run after vim plugins load
+mkdir .vim/after
+ln -sf ~/.dotfiles/vim/after_plugin ~/.vim/after/plugin
+
+# map ftplugin settings
+ln -sf ~/.dotfiles/vim/ftplugin/ ~/.vim/
+
+cd .dotfiles/brew
+brew bundle install
+
+# open apps to create their profiles if needed
+open -a RStudio
+open -a Karabiner-Elements
+open -a iterm
+
+echo sleeping 30 sec
+sleep 30
+
+
+# Specify the preferences directory of iterm2
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.dotfiles/iterm2"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+# map rstudio user settings
+ln -sf ~/.dotfiles/r/user-settings ~/.rstudio-desktop/monitored/user-settings/user-settings
+
+# map rstudio key bindings
+ln -sf ~/.dotfiles/r/keybindings ~/.R/rstudio
+
+Rscript ~/.dotfiles/r/install_r_packages.R
+
+# link up karabiner config
+ln -sf ~/.dotfiles/configs/karabiner.json ~/.config/karabiner/karabiner.json
