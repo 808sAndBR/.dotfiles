@@ -1,0 +1,9 @@
+beautifulsoup4
+gspread
+jupyterlab
+matplotlib
+oauth2client
+pandas
+pip-chill
+ptpython
+scikit-learn
