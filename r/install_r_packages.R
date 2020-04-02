@@ -1,2 +1,2 @@
-packages <- readLines('~/.dotfiles/r/packages')
-install.packages(packages)
+packages <- readLines('~/.dotfiles/r/packages.txt')
+install.packages(packages, repos = "http://cran.us.r-project.org")

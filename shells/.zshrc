@@ -285,3 +285,6 @@ if [ -f '/Users/scottbrenstuhl/Applications/google-cloud-sdk/completion.zsh.inc'
 # enable fuzzy matching with fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
