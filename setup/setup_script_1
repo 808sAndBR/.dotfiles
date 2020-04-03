@@ -1,7 +1,5 @@
 #!/bin/bash
 
-git clone https://github.com/808sAndBR/.dotfiles.git
-
 # symlink .vimrc
 ln -sf ~/.dotfiles/vim/.vimrc ~/.vimrc
 
@@ -9,7 +7,7 @@ ln -sf ~/.dotfiles/vim/.vimrc ~/.vimrc
 ln -sf ~/.dotfiles/shells/.zshrc ~/.zshrc
 
 # set up commands to run after vim plugins load
-mkdir .vim/after
+mkdir -p .vim/after
 ln -sf ~/.dotfiles/vim/after_plugin ~/.vim/after/plugin
 
 # map ftplugin settings
@@ -42,3 +40,6 @@ Rscript ~/.dotfiles/r/install_r_packages.R
 
 # link up karabiner config
 ln -sf ~/.dotfiles/configs/karabiner.json ~/.config/karabiner/karabiner.json
+
+# link p10k settings for zsh
+ln -sf ~/.dotfiles/shells/.p10k.zsh ~/.p10k.zsh
