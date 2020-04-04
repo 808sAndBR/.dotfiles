@@ -92,6 +92,9 @@ Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+" Airline at bottom of vim
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Initialize plugin system
 call plug#end()
@@ -249,3 +252,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_quiet_messages = {"regex": 'syntax error at or near "ignore"',
                                  \ "file": '/private/var/folders/qc'}
 let g:syntastic_ignore_files = ['dev.env']
+
+" Set airline theme
+let g:airline_theme='fairyfloss'
+let g:airline_section_y=''
+" remove separators for empty sections
+let g:airline_skip_empty_sections = 1
