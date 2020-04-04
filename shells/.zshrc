@@ -151,7 +151,7 @@ if [ -f '/Users/scottbrenstuhl/Applications/google-cloud-sdk/completion.zsh.inc'
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 
-# Im not sure wht these arent needed anymore?
+# needed when brew installed 
 #
-# source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-# source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme

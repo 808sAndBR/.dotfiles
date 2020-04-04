@@ -43,3 +43,6 @@ ln -sf ~/.dotfiles/configs/karabiner.json ~/.config/karabiner/karabiner.json
 
 # link p10k settings for zsh
 ln -sf ~/.dotfiles/shells/.p10k.zsh ~/.p10k.zsh
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
