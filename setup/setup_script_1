@@ -39,6 +39,7 @@ ln -sf ~/.dotfiles/r/keybindings ~/.R/rstudio
 Rscript ~/.dotfiles/r/install_r_packages.R
 
 # link up karabiner config
+# This doesnt seem to persist well and gets writen over
 ln -sf ~/.dotfiles/configs/karabiner.json ~/.config/karabiner/karabiner.json
 
 # link p10k settings for zsh
