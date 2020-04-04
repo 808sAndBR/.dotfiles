@@ -19,7 +19,9 @@ export ZSH=/Users/scottbrenstuhl/.oh-my-zsh
 # Path to my commands
 FPATH=~/.dotfiles/commands:$FPATH
 # fpath=( ~/Projects/Commands "${fpath[@]}" )
-autoload -Uz copy_recent brs brs_admin mkcd shrug jump gh rmd_rend ssh_kb bstaging cp_wd brs_dev_admin
+# autoload -Uz copy_recent brs brs_admin mkcd shrug jump gh rmd_rend ssh_kb bstaging cp_wd brs_dev_admin
+
+autoload -U $fpath[1]/*(.:t)
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
