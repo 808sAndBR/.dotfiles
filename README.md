@@ -16,6 +16,13 @@ The brew version is nothing but trouble.
 
 After running the setup scrips go into vim and run `:PlugInstall`
 
+Then to get you complete me working run:
+
+```
+cd .vim/plugged/youcompleteme/
+python3 install.py --all
+```
+
 The below should be run in the setup scripts
 
 ```
