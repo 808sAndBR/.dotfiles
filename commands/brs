@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-## File: brs.sh
-
-echo $RS_PYTHON_PW | pbcopy
-
-pgcli -h brandless-virginia-development.cyprxbwwsuox.us-east-1.redshift.amazonaws.com -p 5439 -U scott_adhoc brandless
-
