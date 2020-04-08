@@ -21,6 +21,16 @@ The major hangups last time:
 * I had not documented installing my prefered font needed for Powerline to work (fixed)
 * Xcode install is so slow
 
+#### Future improvements:
+
+This works pretty flawlessly as long as my user name is `scottbrenstuhl` 
+exactly. I should convert things to work off a variable user name in case
+I eventually need to install on a machine I dont set up from unboxing.
+
+At one point .vimrc and .zshrc worked across my macs and linux distros, 
+this likely isnt the case anymore as I have stopped regularly using my linux 
+machine. It potentially would be nice to get this working again.
+
 ### Scott setup your computer
 
 To get started manually run the below
