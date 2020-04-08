@@ -47,3 +47,6 @@ ln -sf ~/.dotfiles/shells/.p10k.zsh ~/.p10k.zsh
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Set global .gitignore
+git config --global core.excludesfile ~/.dotfiles/git/.gitignore
