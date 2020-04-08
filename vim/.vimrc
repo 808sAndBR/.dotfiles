@@ -96,6 +96,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" enable auto formatting
+Plug 'chiel92/vim-autoformat'
+
+Plug 'alcesleo/vim-uppercase-sql'
+
 " Initialize plugin system
 call plug#end()
 
